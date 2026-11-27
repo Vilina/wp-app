@@ -8,6 +8,9 @@ Each environment (`dev`, `prod`) is a separate deployment of the same code with 
 
 ```text
 wp-app/
+├── .github/
+│   ├── workflows/      # terraform-verify (PRs), terraform-apply (merge to main), terraform-destroy (manual)
+│   └── scripts/        # plan-summary.sh: plan → Markdown for the run summary
 ├── config/
 │   ├── dev.backend     # S3 backend settings for dev  (key app/dev/terraform.tfstate)
 │   ├── dev.tfvars      # dev variables
